@@ -1,0 +1,242 @@
+:root {
+    /* Primary */
+    --Lime: hsl(61, 70%, 52%);
+    --Red: hsl(4, 69%, 50%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --Slate100: hsl(202, 86%, 94%);
+    --Slate300: hsl(203, 41%, 72%);
+    --Slate500: hsl(200, 26%, 54%);
+    --Slate700: hsl(200, 24%, 40%);
+    --Slate900: hsl(202, 55%, 16%);
+
+    /* Font Family */
+
+    --primaryFont: "Plus Jakarta Sans", sans-serif;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* =10px */ 
+    font-family: var(--primaryFont);
+    color: var(--Slate900);   
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.6rem;  
+    background-color: var(--Slate100);  
+  }
+
+  @media (min-width: 768px){
+    body {
+        padding: 5rem;
+        background-color: var(--Slate100);
+    }
+  }
+  
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  input {
+    display: inline-block;
+    border: none;
+    width: 100%;
+    outline: none;
+    background-color: var(--white)!important;
+  }
+ 
+  .hide {
+    display: none!important;
+  }
+ 
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width:768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 70vw;
+        background-color: var(--white);
+        border-radius: 2.5rem;                 
+    }
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem; 
+    padding: 3rem; 
+    background-color: var(--white); 
+    border-radius: 2.5rem;   
+  }
+
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+  }
+
+
+  
+  .row2:first-of-type {
+        justify-content: space-between;
+   }
+    
+
+  .row2 a {
+    color: var(--Slate900);
+  }
+
+  @media (min-width: 768px){
+    .row2 {
+        flex-direction: row;
+        align-items: center;
+    }
+  }
+
+  .box {
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+  }
+
+  .box form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .input-box {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: .5rem;
+    height: 4rem;
+  }
+
+  .input-box:first-of-type {
+    justify-content: flex-start !important;
+ }
+
+ .input-box span {
+    background-color: var(--Slate100);
+    height: 100%;
+    width: 4rem;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: .5rem;
+ }
+
+ .input-box .span-years{
+    width: 6rem;
+ }
+
+ .radio-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+    gap: 2rem;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: .5rem;
+ }
+
+ .radio-option label {
+    font-weight: 700;
+ }
+
+ .radio-option #repayment{
+    width: 3rem;
+ }
+  
+ .radio-option #interest-o {
+    width: 3rem;
+ }
+
+ .cal-repay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    background-color: var(--Lime);
+    color: var(--Slate900);
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    padding: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+ }
+
+ .results-show-here {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: #133040;
+    
+ }
+
+ @media (min-width: 768px){
+    .results-show-here {
+      border-radius: 0 2.5rem 2.5rem 6.5rem; 
+    }
+ }
+
+ .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+ }
+
+ .empty p {
+    color: var(--Slate500);
+    text-align: center;
+ }
+
+ .complete {
+    padding: 2rem;
+    justify-content: flex-start;
+ }
+
+ .complete-box {
+    padding: 2rem;
+    -webkit-box-shadow: 2px 5px 15px -2px var(--grey400); 
+    box-shadow: 0px 5px 15px -2px var(--grey400);
+    border-radius: 1rem;
+    border-top: .5rem solid var(--Lime);
+    margin-bottom: 3.2rem;
+    background-color: #0E2431;
+  }
+
+  .monthly-repay p:nth-child(2){
+    color: var(--Lime);
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+
+ 
